@@ -30,9 +30,9 @@ Once you have the full story, do **not** dump it all into a single massive `SKIL
 Separate the content into logical, chronological narrative documents (e.g., `origin_story.md`, `job_journey.md`, `roadmaps.md`). 
 
 ### 3. The Generation Phase
-Use your file-writing tools to create the new skill in the workspace.
+Use your file-writing tools to create the new skill **next to this skill**, in the same skills folder. That is the parent folder of the folder containing this `SKILL.md` (for example `~/.claude/skills/` for Claude Code, or `.agents/skills/` for Antigravity), so the agent can load the new skill without any moving. Use a different location only if the user asks for one.
 
-1. Create a `references/` subdirectory inside the new skill folder: `.agents/skills/<skill-name>/references/`.
+1. Create a `references/` subdirectory inside the new skill folder: `<skills folder>/<skill-name>/references/`.
 2. Write the detailed chronological narratives as markdown files into the `references/` directory.
 3. Write the main `SKILL.md` file at the root of the skill folder.
 
@@ -61,4 +61,4 @@ For deep psychological context, chronological job history, and exact study roadm
 ```
 
 ### 4. Confirmation Phase
-Notify the user that the skill has been created successfully. Explain how the multi-file architecture works (progressive disclosure: agents read the executive summary first, and click into the narrative references only when deep psychological or historical context is needed).
+Notify the user that the skill has been created successfully, and that it can be used in new conversations (some agents only load skills when a conversation starts). Explain how the multi-file architecture works (progressive disclosure: agents read the executive summary first, and click into the narrative references only when deep psychological or historical context is needed).
